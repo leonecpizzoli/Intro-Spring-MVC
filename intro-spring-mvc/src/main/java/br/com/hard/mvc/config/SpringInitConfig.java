@@ -1,9 +1,8 @@
 package br.com.hard.mvc.config;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-@Configuration
+
 public class SpringInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override

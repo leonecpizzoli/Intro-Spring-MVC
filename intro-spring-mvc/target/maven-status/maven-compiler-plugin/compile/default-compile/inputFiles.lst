@@ -1,4 +1,8 @@
-C:\Users\Leone\workspace\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\RootConfig.java
-C:\Users\Leone\workspace\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringInitConfig.java
-C:\Users\Leone\workspace\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringMvcConfig.java
-C:\Users\Leone\workspace\intro-spring-mvc\src\main\java\br\com\hard\mvc\controller\WelcomeController.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\RootConfig.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\domain\Usuario.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\controller\WelcomeController.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\controller\UsuarioController.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringMvcConfig.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\dao\UsuarioDao.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringInitConfig.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\dao\UsuarioDaoImpl.java
