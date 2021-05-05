@@ -7,16 +7,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Lista de Usuarios</title>
-    <spring:url var="css" value="/static/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="${css }"/>
 </head>
 <body>
 <div class="container">
     <h1>Lista de Usuários</h1>
     <hr>
     <div>
-
-        <a class="btn btn-default" href="#">Novo Usuário</a>
+		<spring:url value="/usuario/cadastro" var="cadastro"/>
+        <a class="btn btn-default" href="${cadastro }">Novo Usuário</a>
     </div>
     <hr>
 
@@ -41,8 +39,10 @@
                     <td>${usuario.nome }&nbsp;${usuario.sobrenome }</td>
               
                     <td>	
-                        <a class="btn btn-info" href="#" >Editar</a>
-                        <a class="btn btn-danger" href="#" >Excluir</a>
+                    	<spring:url value="/usuario/update/${usuario.id }" var="update"/>
+                        <a class="btn btn-info" href="${update }" >Editar</a>
+                        <spring:url value="/usuario/delete/${usuario.id }" var="delete"/>
+                        <a class="btn btn-danger" href="${delete }" >Excluir</a>
                     </td>
                 </tr>
             </c:forEach>
