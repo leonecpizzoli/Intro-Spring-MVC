@@ -1,15 +1,51 @@
 package br.com.hard.mvc.domain;
 
+import java.time.LocalDate;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 public class Usuario {
 	
 	private Long id;
 	
+	@NotBlank
+	@Size(min = 3, max = 50)
 	private String nome;
 	
+	private TipoSexo sexo;
+	
+	@NotBlank
+	@Size(min = 3, max = 50)
 	private String sobrenome;
+	
+	@NotNull
+	@DateTimeFormat(iso = ISO.DATE)
+	private LocalDate dtNascimento;
 	
 	public Usuario() {
 		super();
+	}
+	
+	public Usuario(Long id, String nome, TipoSexo sexo, String sobrenome, LocalDate dtNascimento) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sexo = sexo;
+		this.sobrenome = sobrenome;
+		this.dtNascimento = dtNascimento;
+	}
+
+	public Usuario(Long id, String nome, String sobrenome, LocalDate dtNascimento) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.dtNascimento = dtNascimento;
 	}
 
 	public Usuario(Long id, String nome, String sobrenome) {
@@ -42,6 +78,24 @@ public class Usuario {
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}
+
+	public LocalDate getDtNascimento() {
+		return dtNascimento;
+	}
+
+	public void setDtNascimento(LocalDate dtNascimento) {
+		this.dtNascimento = dtNascimento;
+	}
+
+	public TipoSexo getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(TipoSexo sexo) {
+		this.sexo = sexo;
+	}
+	
+	
 	
 	
 }
