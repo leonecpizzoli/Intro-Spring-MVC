@@ -1,6 +1,7 @@
 C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\web\conversor\TipoSexoConverter.java
 C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\RootConfig.java
 C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\domain\Usuario.java
+C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringJpaConfig.java
 C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringMvcConfig.java
 C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\dao\UsuarioDao.java
 C:\Users\Leone\Documents\GitHub\Intro-Spring-MVC\intro-spring-mvc\src\main\java\br\com\hard\mvc\config\SpringInitConfig.java

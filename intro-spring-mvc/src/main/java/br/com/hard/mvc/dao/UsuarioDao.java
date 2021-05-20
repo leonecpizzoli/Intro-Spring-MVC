@@ -2,6 +2,7 @@ package br.com.hard.mvc.dao;
 
 import java.util.List;
 
+import br.com.hard.mvc.domain.TipoSexo;
 import br.com.hard.mvc.domain.Usuario;
 
 public interface UsuarioDao {
@@ -15,4 +16,8 @@ public interface UsuarioDao {
 	Usuario getId(Long id);
 	
 	List<Usuario> getTodos();
+	
+	List<Usuario> getBySexo(TipoSexo sexo);
+	
+	List<Usuario> getByNome(String nome);
 }

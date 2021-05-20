@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -26,6 +27,29 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioDao userDAO;
 	
+	@ModelAttribute("sexos")
+	public TipoSexo[] tipoSexo(){
+		return TipoSexo.values();
+	}
+	
+	@GetMapping("/sexo")
+	public ModelAndView listarPorSexo(@RequestParam("tipoSexo") TipoSexo sexo){
+		
+		if(sexo == null){
+			return new ModelAndView("redirect:/usuario/todos");
+		}
+		return new ModelAndView("/user/list", "usuarios", userDAO.getBySexo(sexo));
+	}
+	
+	@GetMapping("/nome")
+	public ModelAndView listarPorNome(@RequestParam("nome") String nome){
+		
+		if(nome == null){
+			return new ModelAndView("redirect:/usuario/todos");
+		}
+		return new ModelAndView("/user/list", "usuarios", userDAO.getByNome(nome));
+	}
+	
 	@RequestMapping(value="/todos", method = RequestMethod.GET)
 	public ModelAndView listaTodosUsuarios(ModelMap model){
 		model.addAttribute("usuarios", userDAO.getTodos());
@@ -34,7 +58,6 @@ public class UsuarioController {
 	
 	@GetMapping("/cadastro")
 	public String cadastro(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
-		model.addAttribute("sexos", TipoSexo.values());
 		return "/user/add";		
 	}
 	
